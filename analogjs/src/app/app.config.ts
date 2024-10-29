@@ -1,27 +1,20 @@
-import { provideContent, withMarkdownRenderer } from '@analogjs/content';
-import { withShikiHighlighter } from '@analogjs/content/shiki-highlighter';
-import { provideFileRouter } from '@analogjs/router';
-import { provideHttpClient } from '@angular/common/http';
-import { ApplicationConfig } from '@angular/core';
-import { provideClientHydration } from '@angular/platform-browser';
 import {
-  withEnabledBlockingInitialNavigation,
-  withInMemoryScrolling,
-} from '@angular/router';
+  provideHttpClient,
+  withFetch,
+  withInterceptors,
+} from '@angular/common/http';
+import { ApplicationConfig, provideZoneChangeDetection } from '@angular/core';
+import { provideClientHydration } from '@angular/platform-browser';
+import { provideFileRouter, requestContextInterceptor } from '@analogjs/router';
 
 export const appConfig: ApplicationConfig = {
   providers: [
-    provideHttpClient(),
+    provideZoneChangeDetection({ eventCoalescing: true }),
+    provideFileRouter(),
+    provideHttpClient(
+      withFetch(),
+      withInterceptors([requestContextInterceptor])
+    ),
     provideClientHydration(),
-    provideContent(
-      withMarkdownRenderer({
-        loadMermaid: () => import('mermaid'),
-      }),
-      withShikiHighlighter()
-    ),
-    provideFileRouter(
-      withInMemoryScrolling({ anchorScrolling: 'enabled' }),
-      withEnabledBlockingInitialNavigation()
-    ),
   ],
 };
