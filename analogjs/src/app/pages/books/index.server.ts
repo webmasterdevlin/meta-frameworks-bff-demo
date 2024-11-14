@@ -8,8 +8,8 @@ export const load = async ({
   event, // full request event
 }: PageServerLoad) => {
   return [
-    { id: 1, title: 'The Great Gatsby' },
-    { id: 2, title: 'The Catcher in the Rye' },
-    { id: 3, title: 'To Kill a Mockingbird' },
+    { id: 1, title: 'the great gatsby' },
+    { id: 2, title: 'the catcher in the rye' },
+    { id: 3, title: 'to kill a mockingbird' },
   ];
 };
