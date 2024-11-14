@@ -2,20 +2,18 @@ import { injectLoad } from '@analogjs/router';
 import { Component } from '@angular/core';
 import { toSignal } from '@angular/core/rxjs-interop';
 import { load } from './index.server';
-import { TitleCasePipe } from '@angular/common';
+import { CommonModule, TitleCasePipe } from '@angular/common';
 
 @Component({
   standalone: true,
-  imports: [TitleCasePipe],
+  imports: [TitleCasePipe, CommonModule],
   template: `
     <div>
       <h1>Welcome to Books Page!</h1>
       <ul>
-        @for (book of data(); track book.id) {
-        <li>
+        <li *ngFor="let book of data()">
           {{ book.title | titlecase }}
         </li>
-        }
       </ul>
     </div>
   `,

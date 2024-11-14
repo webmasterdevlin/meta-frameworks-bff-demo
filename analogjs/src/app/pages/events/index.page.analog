@@ -1,17 +1,15 @@
 <script lang="ts">
 import { TitleCasePipe } from '@angular/common'; // with { analog: 'imports' };
 import { load } from './index.server';
+import { injectLoad } from '@analogjs/router';
+import { toSignal } from '@angular/core/rxjs-interop';
+
 
 defineMetadata({
   imports: [TitleCasePipe],
 });
 
-
- const events = [
-    { id: 1, title: 'angular oslo meetup' },
-    { id: 2, title: 'react oslo meetup' },
-    { id: 3, title: 'vuejs oslo meetup' },
-  ];
+const events = toSignal(injectLoad<typeof load>(), { requireSync: true });
 
 </script>
 
@@ -19,7 +17,7 @@ defineMetadata({
   <h1>Welcome to Events Page!</h1>
   <div>
     <ul>
-        @for (event of events; track event.id) {
+        @for (event of events(); track event.id) {
         <li>
           {{ event.title | titlecase }}
         </li>
