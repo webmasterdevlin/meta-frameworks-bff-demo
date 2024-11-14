@@ -9,11 +9,11 @@ importers:
   .:
     dependencies:
       '@solidjs/router':
-        specifier: ^0.14.10
-        version: 0.14.10(solid-js@1.9.3)
+        specifier: ^0.15.1
+        version: 0.15.1(solid-js@1.9.3)
       '@solidjs/start':
-        specifier: ^1.0.9
-        version: 1.0.9(solid-js@1.9.3)(vinxi@0.4.3(@types/node@22.8.4)(ioredis@5.4.1)(terser@5.36.0))(vite@5.4.10(@types/node@22.8.4)(terser@5.36.0))
+        specifier: ^1.0.10
+        version: 1.0.10(solid-js@1.9.3)(vinxi@0.4.3(@types/node@22.8.4)(ioredis@5.4.1)(terser@5.36.0))(vite@5.4.10(@types/node@22.8.4)(terser@5.36.0))
       solid-js:
         specifier: ^1.9.3
         version: 1.9.3
@@ -718,13 +718,13 @@ packages:
     resolution: {integrity: sha512-LtoMMhxAlorcGhmFYI+LhPgbPZCkgP6ra1YL604EeF6U98pLlQ3iWIGMdWSC+vWmPBWBNgmDBAhnAobLROJmwg==}
     engines: {node: '>=18'}
 
-  '@solidjs/router@0.14.10':
-    resolution: {integrity: sha512-5B8LVgvvXijfXyXWPVLUm7RQ05BhjIpAyRkYVDZtrR3OaSvftXobWc6qSEwk4ICLoGi/IE9CUp2LUdCBIs9AXg==}
+  '@solidjs/router@0.15.1':
+    resolution: {integrity: sha512-lb5BRBqQqii/1dQCglx2K68xLkgu7QcrcajWKuuEx6FHTsK/hp5IgVhjy6RzPMLj+SFyrrRi/ldirCFNxtzh0Q==}
     peerDependencies:
       solid-js: ^1.8.6
 
-  '@solidjs/start@1.0.9':
-    resolution: {integrity: sha512-dZ1b4Oa5gXk95eVxHAj/W+sQIY3yevYeerrxKNWPqwTyzZYvwUwpnU7Ph3sMduo5LnL/USQ66AloLTs2FX94ZA==}
+  '@solidjs/start@1.0.10':
+    resolution: {integrity: sha512-3yg4KraSxc4rXs9dy/3kkqjDhU0JCPsZFLmDl5n6hHRPwtLLac6WUhs2k5VxGzitHaaJM/ZQCfT7i544Mf+4tw==}
 
   '@types/babel__core@7.20.5':
     resolution: {integrity: sha512-qoQprZvz5wQFJwMDqeseRXWv3rqMvhgpbXFfVyWhbx9X47POIA6i/+dXefEmZKoAgOaTdaIgNSMqMIU61yRyzA==}
@@ -2865,11 +2865,11 @@ snapshots:
 
   '@sindresorhus/merge-streams@2.3.0': {}
 
-  '@solidjs/router@0.14.10(solid-js@1.9.3)':
+  '@solidjs/router@0.15.1(solid-js@1.9.3)':
     dependencies:
       solid-js: 1.9.3
 
-  '@solidjs/start@1.0.9(solid-js@1.9.3)(vinxi@0.4.3(@types/node@22.8.4)(ioredis@5.4.1)(terser@5.36.0))(vite@5.4.10(@types/node@22.8.4)(terser@5.36.0))':
+  '@solidjs/start@1.0.10(solid-js@1.9.3)(vinxi@0.4.3(@types/node@22.8.4)(ioredis@5.4.1)(terser@5.36.0))(vite@5.4.10(@types/node@22.8.4)(terser@5.36.0))':
     dependencies:
       '@vinxi/plugin-directives': 0.4.3(vinxi@0.4.3(@types/node@22.8.4)(ioredis@5.4.1)(terser@5.36.0))
       '@vinxi/server-components': 0.4.3(vinxi@0.4.3(@types/node@22.8.4)(ioredis@5.4.1)(terser@5.36.0))

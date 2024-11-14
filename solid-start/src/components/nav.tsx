@@ -5,23 +5,14 @@ function Nav() {
     <header class="header">
       <nav class="inner">
         <A href="/" end>
-          <strong>HN</strong>
+          <strong>Home</strong>
         </A>
-        <A href="/new">
-          <strong>New</strong>
+        <A href="/about">
+          <strong>About</strong>
         </A>
-        <A href="/show">
-          <strong>Show</strong>
+        <A href="/books">
+          <strong>Books</strong>
         </A>
-        <A href="/ask">
-          <strong>Ask</strong>
-        </A>
-        <A href="/job">
-          <strong>Jobs</strong>
-        </A>
-        <a class="github" href="http://github.com/solidjs/solid" target="_blank" rel="noreferrer">
-          Built with Solid
-        </a>
       </nav>
     </header>
   );
