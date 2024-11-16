@@ -1,6 +1,7 @@
 import { getBooks } from "@/data/services/getBooks";
 
 
+// react components runs in the by default not unless the "use client" directive is specified.
 
 export default async function BooksPage() {
     const books = await getBooks();
