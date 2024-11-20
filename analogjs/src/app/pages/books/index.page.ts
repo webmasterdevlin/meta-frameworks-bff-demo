@@ -5,7 +5,6 @@ import { load } from './index.server';
 import { CommonModule, TitleCasePipe } from '@angular/common';
 
 @Component({
-  standalone: true,
   imports: [TitleCasePipe, CommonModule],
   template: `
     <div>
